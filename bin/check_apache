@@ -318,6 +318,7 @@ def main():
                 zabbixserver = opts.zabbixserver, 
                 zabbixport   = opts.zabbixport, 
                 senderloc    = opts.senderloc )
+            print result
         except Exception as e:
             zbx_fail('failed to send parsed data: %s' % e)
 
