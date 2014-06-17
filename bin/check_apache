@@ -310,7 +310,7 @@ def main():
     else:
         # cron or remote check; hostname may be distinct from host running the check
         for key, val in data.items():
-            payload += "%s apache[%s,%s] %s\n" % (opts.zabbixsource, opts.host, key, val)
+            payload += "%s apache[%s] %s\n" % (opts.zabbixsource, key, val)
 
         try:
             result = zabbix_sender(
